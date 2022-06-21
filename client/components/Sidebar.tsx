@@ -83,6 +83,20 @@ function Sidebar({ initialSelectedIcon }: SidebarProps) {
           setSelected={setSelected}
           redirect={"/profile"}
         />
+        <SidebarOption
+          Icon={selected === "More" ? CgMoreO : FiMoreHorizontal}
+          text="More"
+          isActive={Boolean(selected === "More")}
+          setSelected={setSelected}
+        />
+        <div
+          onClick={() => {
+            console.log("clicked");
+          }}
+          className={style.tweetButton}
+        >
+          Mint
+        </div>
       </div>
     </div>
   );
